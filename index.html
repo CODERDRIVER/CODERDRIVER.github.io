@@ -9,7 +9,6 @@
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
   
@@ -51,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -84,7 +83,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##javaע��<br>�����ܹ���4�У�</p>
+        <p>##java注解<br>类型总共有4中：</p>
 <blockquote>
 <ol>
 <li>@Target</li>
@@ -93,27 +92,27 @@
 <li>@Inherited</li>
 </ol>
 </blockquote>
-<h3 id="1-Target��˵����Annotation�����εK�����Χ�����Ա�����packages-types-�࣬�ӿڣ�o��"><a href="#1-Target��˵����Annotation�����εK�����Χ�����Ա�����packages-types-�࣬�ӿڣ�o��" class="headerlink" title="1.  @Target��˵����Annotation�����εĶ�����Χ�����Ա�����packages,types,�࣬�ӿڣ�ö��"></a>1.  @Target��˵����Annotation�����εĶ�����Χ�����Ա�����packages,types,�࣬�ӿڣ�ö��</h3><p>ElementType:ȡֵ��</p>
+<h3 id="1-Target：说明了Annotation所修饰的对象范围，可以被用作packages-types-类，接口，枚举"><a href="#1-Target：说明了Annotation所修饰的对象范围，可以被用作packages-types-类，接口，枚举" class="headerlink" title="1.  @Target：说明了Annotation所修饰的对象范围，可以被用作packages,types,类，接口，枚举"></a>1.  @Target：说明了Annotation所修饰的对象范围，可以被用作packages,types,类，接口，枚举</h3><p>ElementType:取值：</p>
 <ul>
-<li>CONSTRUCTOR:���ڹ�����</li>
-<li>FIELD:����������,���ĳ�Ա����</li>
-<li>LOCAL_VARIABLE:���������ֲ�����</li>
-<li>METHOD:������������<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Target</span>(ElementType.TYPE)</div><div class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Table&#123;</div><div class="line">	<span class="comment">/**</span></div><div class="line"><span class="comment">	*���ݱ�����ע�⣬Ĭ��ֵΪ������</span></div><div class="line"><span class="comment">	*/</span></div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">tableName</span><span class="params">()</span> defalut "className"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li>CONSTRUCTOR:用于构造器</li>
+<li>FIELD:用于描述域,类的成员变量</li>
+<li>LOCAL_VARIABLE:用于描述局部变量</li>
+<li>METHOD:用于描述方法<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Target</span>(ElementType.TYPE)</div><div class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Table&#123;</div><div class="line">	<span class="comment">/**</span></div><div class="line"><span class="comment">	*数据表名称注解，默认值为类名称</span></div><div class="line"><span class="comment">	*/</span></div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">tableName</span><span class="params">()</span> defalut "className"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="2-Retention-�����˸�Annotation��������ʱ�䳤��"><a href="#2-Retention-�����˸�Annotation��������ʱ�䳤��" class="headerlink" title="2. @Retention: �����˸�Annotation��������ʱ�䳤��"></a>2. @Retention: �����˸�Annotation��������ʱ�䳤��</h3><p>RetentionPoicyȡֵ��</p>
+<h3 id="2-Retention-定义了该Annotation被保留的时间长短"><a href="#2-Retention-定义了该Annotation被保留的时间长短" class="headerlink" title="2. @Retention: 定义了该Annotation被保留的时间长短"></a>2. @Retention: 定义了该Annotation被保留的时间长短</h3><p>RetentionPoicy取值：</p>
 <ul>
-<li>SOURCE: ��Դ�ļ�����Ч����Դ�ļ�������</li>
-<li>CLASS: ��class�ļ�����Ч����class������</li>
-<li>RUNTIME: ������ʱ��Ч��������ʱ������</li>
+<li>SOURCE: 在源文件中有效（即源文件保留）</li>
+<li>CLASS: 在class文件中有效（即class保留）</li>
+<li>RUNTIME: 在运行时有效（即运行时保留）</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Target</span>(ElementType.FIELD)</div><div class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</div><div class="line"><span class="meta">@Documented</span></div><div class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Column &#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">name</span><span class="params">()</span> <span class="keyword">default</span> "fieldName"</span>;</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">setFuncName</span><span class="params">()</span> <span class="keyword">default</span> "setField"</span>;</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getFuncName</span><span class="params">()</span> <span class="keyword">default</span> "getField"</span>; </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">defaultDBValue</span><span class="params">()</span> <span class="keyword">default</span> <span class="keyword">false</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="3-Documented-���������������͵�annotationӦ����Ϊ����ע�ĳ�����Ա�L���API"><a href="#3-Documented-���������������͵�annotationӦ����Ϊ����ע�ĳ�����Ա�L���API" class="headerlink" title="3. Documented:���������������͵�annotationӦ����Ϊ����ע�ĳ�����Ա�Ĺ���API"></a>3. Documented:���������������͵�annotationӦ����Ϊ����ע�ĳ�����Ա�Ĺ���API</h3><p>###4. Inherited: Ԫע����һ������ע�⣬������ĳ������ע�������Ǳ��̳С�����һ��ʹ����@Inherited���ε�annotation���ͱ�����һ��class��������annotation�������ڸ�class������</p>
+<h3 id="3-Documented-用于描述其他类型的annotation应该作为被标注的程序成员的公共API"><a href="#3-Documented-用于描述其他类型的annotation应该作为被标注的程序成员的公共API" class="headerlink" title="3. Documented:用于描述其他类型的annotation应该作为被标注的程序成员的公共API"></a>3. Documented:用于描述其他类型的annotation应该作为被标注的程序成员的公共API</h3><p>###4. Inherited: 元注解是一个标记注解，阐述了某个被标注的类型是被继承。如果一个使用了@Inherited修饰的annotation类型被用于一个class，则这个annotation将被用于该class的字类</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/07/myfirst/" data-id="cj9pr5bui0000vkjhqbh8ja7g" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/07/myfirst/" data-id="cj9prak6z0001bojhp5jbna46" class="article-share-link">Share</a>
       
       
     </footer>
@@ -158,7 +157,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/06/hello-world/" data-id="cj9pr5bur0001vkjhx9bczf8d" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/06/hello-world/" data-id="cj9prak6q0000bojh5al98qwq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -183,9 +182,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
     </div>
   </div>
 
@@ -193,7 +192,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
