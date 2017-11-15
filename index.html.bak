@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>Yang'Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
@@ -33,7 +33,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">旭阳</a>
       </h1>
       
     </div>
@@ -110,7 +110,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/15/latex/LeTex/" data-id="cja16jror00030gjhp564rcxu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/15/latex/LeTex/" data-id="cja16h4fg00034gjhrwdp512z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -156,7 +156,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/08/mysecond/" data-id="cja16jro200020gjhdhwfuf5l" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/08/mysecond/" data-id="cja16h4ev00024gjhkqq3w021" class="article-share-link">Share</a>
       
       
     </footer>
@@ -217,7 +217,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/07/myfirst/" data-id="cja16jrnp00000gjhbx2ub5nk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/07/myfirst/" data-id="cja16h4eh00004gjhugxcvj4f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -262,7 +262,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/06/hello-world/" data-id="cja16jrnx00010gjh16xxtsua" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/06/hello-world/" data-id="cja16h4ep00014gjhkortlitm" class="article-share-link">Share</a>
       
       
     </footer>
