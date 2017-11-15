@@ -61,6 +61,55 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-latex/LeTex" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/15/latex/LeTex/" class="article-date">
+  <time datetime="2017-11-15T08:37:16.468Z" itemprop="datePublished">2017-11-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Sublime-Text-搭建-LaTex-环境"><a href="#Sublime-Text-搭建-LaTex-环境" class="headerlink" title="Sublime Text 搭建 LaTex 环境"></a>Sublime Text 搭建 LaTex 环境</h1><p>本次latex环境主要涉及一下几个东西：</p>
+<ol>
+<li>Sublime Text 3.0 <a href="http://www.sublimetext.com/3" target="_blank" rel="external">http://www.sublimetext.com/3</a></li>
+<li>miktex <a href="https://miktex.org/download" target="_blank" rel="external">https://miktex.org/download</a></li>
+<li>SumatraPDF<br><a href="http://www.smart-soft.net/products/smart-pdf-converter/smart-pdf-converter.htm" target="_blank" rel="external">http://www.smart-soft.net/products/smart-pdf-converter/smart-pdf-converter.htm</a></li>
+<li>LatexTools</li>
+</ol>
+<p>下载之后的文件如下图所示（其中SumatraPDF的名字已经被我重命名）<br><img src="markdown-img-paste-20171115165456118.png" alt="aa"><br>SublimeText的安装非常简单，本章不在赘述。miktex的安装也直接下一步直接点下去，注意：要记住miktex的安装路径，在后面配置环境是需要使用。</p>
+<p>LatexTools的安装相比较有点麻烦，推荐手动安装，因为sublime text手动安装的话可能会由于网的问题出现许多问题。在sublime的插件包官网上搜过latextools下载具体可以参考下面的操作</p>
+<p>打开ST-&gt;首选项-&gt;插件控制，会出现如图界面<br><img src="markdown-img-paste-20171115170733220.png" alt="bb"></p>
+<p>点开搜索插件，进入下面界面：</p>
+<p><img src="markdown-img-paste-20171115170903582.png" alt="cc"></p>
+<p>在里面搜索自己想要的插件包，比如latextools</p>
+<p><img src="markdown-img-paste-20171115170959268.png" alt="dd"></p>
+<p>点进去会出现如下界面：</p>
+<p><img src="markdown-img-paste-20171115171047168.png" alt="ee"></p>
+<p>可以看出该插件被放在github仓库里面，点开图上所标记的链接，会进入一个github仓库中，接着可以进入repository进行插件包的下载。（记住包的路径）</p>
+<h2 id="注意-重点来了"><a href="#注意-重点来了" class="headerlink" title="注意 重点来了"></a>注意 重点来了</h2><p>将下载好的latextools的zip文件直接解压到sublime text的packages包的根目录下，我的本机目录如下：</p>
+<p><img src="markdown-img-paste-20171115171359140.png" alt="ff"></p>
+<p>接着打开sublime text ,打开首选项中的<b>浏览插件</b>,找到latextools的目录，在里面找到<br><img src="markdown-img-paste-2017111517163739.png" alt="gg">,使用sublime text打开，在里面全局搜索（ctrl + f）windows,定位到如下位置：<br><img src="markdown-img-paste-20171115171830838.png" alt="hh"></p>
+<p>其中第一个标记为miktex的安装目录，根据自己的安装目录更改路径，第二个为按照如图修改即可，第三个是sumatra的路径，根据自己的下载路径进行配置。也可以将sumatra的路径添加到系统的环境变量中，此处不再细说。到此，所有的配置过程都已经安装完成，下来测试自己的配置是否成功：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">\documentclass&#123;article&#125;</div><div class="line">\title&#123;First \LaTeX\ article&#125;</div><div class="line">\author&#123;lxy&#125;  </div><div class="line">\begin&#123;document&#125;  </div><div class="line">\maketitle&#123;&#125;  </div><div class="line">\section&#123;Introduction&#125;  </div><div class="line">Hello \LaTeX. How are you?</div><div class="line"></div><div class="line">\end&#123;document&#125;</div></pre></td></tr></table></figure></p>
+<p>文件后缀名为.tex,接着在工具栏选择编译系统Latex，然后ctrl+b运行，出来如下结果<br><img src="markdown-img-paste-2017111517234819.png" alt="ii"></p>
+<p>至此，大功告成！！！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/15/latex/LeTex/" data-id="cja0x3k420003agjh48iwotq7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-mysecond" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/11/08/mysecond/" class="article-date">
@@ -97,7 +146,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/08/mysecond/" data-id="cj9qnhta60002cojh6lenl2yc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/08/mysecond/" data-id="cja0x3k330000agjh9fs8xuz0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -158,7 +207,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/07/myfirst/" data-id="cj9qnhta10001cojh57a7t3ls" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/07/myfirst/" data-id="cja0x3k3a0001agjhwyebjgp4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -203,7 +252,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/06/hello-world/" data-id="cj9qnht9t0000cojh9s4j86pe" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/06/hello-world/" data-id="cja0x3k3f0002agjhbcag0alk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -241,6 +290,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/11/15/latex/LeTex/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2017/11/08/mysecond/">mySecond</a>
